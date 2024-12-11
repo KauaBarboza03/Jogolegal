@@ -1,0 +1,64 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background: linear-gradient(180deg, #444, #222);
+    overflow: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+#player {
+    position: absolute;
+    bottom: 20px;
+    left: 180px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #00ff00, #006600);
+    border-radius: 50%;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+.obstacle {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #ff4d4d, #b30000);
+    border-radius: 10%;
+    box-shadow: 0 0 15px #ff4d4d;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+}
